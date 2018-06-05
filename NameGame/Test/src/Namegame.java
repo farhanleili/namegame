@@ -9,18 +9,15 @@ public class Namegame {
 
 		Random rand = new Random();
 
-		System.out.println(firstname[rand.nextInt(2)] + "  " + lastname[rand.nextInt(2)]);
+		int randomNumber1 = rand.nextInt(firstname.length);
+		int randomNumber2 = rand.nextInt(firstname.length);
+		
+		System.out.println("Random name is: " + firstname[randomNumber1] + "  " + lastname[randomNumber2]);
 
-		if ( firstname[rand.nextInt(2)] == firstname[0] && lastname[rand.nextInt(2)] == lastname[0])
+		if ( firstname[randomNumber1] == firstname[0] && lastname[randomNumber2] == lastname[0] || firstname[randomNumber1] == firstname[1] && lastname[randomNumber2] == lastname[1])
 		{
 			System.out.println("right");
 		}
-
-		else if ( firstname[rand.nextInt(2)] == firstname[1] && lastname[rand.nextInt(2)] == lastname[1])
-		{
-			System.out.println("right");
-		}
-
 		else {
 			System.out.println("false");
 		}		

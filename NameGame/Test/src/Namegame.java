@@ -4,27 +4,19 @@ public class Namegame {
 	public static void main(String[] args) {
 		System.out.println("Hej, Name game " );
 
-		String[] firstname = {"Alex" , "Farhan" } ;
-		String[] lastname = {"Jonsson" , "Leili" };
+		String[] name = {"Alex", "Jonsson" , "Farhan", "Leili"} ;
 
 		Random rand = new Random();
 
-		System.out.println(firstname[rand.nextInt(2)] + "  " + lastname[rand.nextInt(2)]);
+		int randomNumber1 = rand.nextInt(name.length);
+		int randomNumber2 = rand.nextInt(name.length);
+		
+		System.out.println("Random name is: " + name[randomNumber1] + "  " + name[randomNumber2]);
 
-		if ( firstname[rand.nextInt(2)] == firstname[0] && lastname[rand.nextInt(2)] == lastname[0])
-		{
-			System.out.println("right");
-		}
-
-		else if ( firstname[rand.nextInt(2)] == firstname[1] && lastname[rand.nextInt(2)] == lastname[1])
-		{
-			System.out.println("right");
-		}
-
-		else {
-			System.out.println("false");
-		}		
-
+		if (randomNumber2==randomNumber1+1)
+			System.out.println("True");
+		else
+			System.out.println("False");
 	}
 }
 
